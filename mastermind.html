@@ -6,18 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Test JavaScript</p>
-    <p> aaa test</p>
 
 
-  <form id="monForm">
-    <label for="couleur">Couleur :</label>
-    <input type="text" id="couleur" name="couleur" placeholder="Entrez une couleur">
-    <button type="submit">Combinaison</button>
-  </form>
+
+  <label for="couleur">Entrez votre combinaison (4 chiffres entre 1 et 6) :</label>
+  <input type="text" id="couleur" maxlength="4" placeholder="ex : 1234">
+  <button id="valider">Valider</button>
 
   <h3>Zone d'affichage :</h3>
-  <div id="affichage" style="border:1px solid #ccc; padding:10px; width:300px; min-height:50px;"></div>
-    <script src="mastermind.js"></script>
+  <div id="zone" style="border:1px solid #ccc; padding:10px; width:300px; min-height:50px;"></div>
+ <script src="mastermind.js"></script>
 </body>
 </html>
