@@ -1,20 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8" />
+  <title>Jeu combinaison - séparé JS</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding:20px; }
+    #historique { border:1px solid #ccc; padding:10px; min-height:80px; width:320px; list-style:none; }
+    #historique li.ok { color:green; }
+    #historique li.ko { color:red; }
+  </style>
 </head>
 <body>
 
+  <h1>Jeu : combinaison secrète</h1>
 
+  <form id="formProposition" autocomplete="off">
+    <label for="proposition">Entrez 4 chiffres (1-6) :</label>
+    <input type="text" id="proposition" maxlength="4" placeholder="ex: 1234" />
+    <button type="submit">Valider</button>
+    <button type="button" id="btnNouvellePartie">Nouvelle partie</button>
+  </form>
 
-  <label for="couleur">Entrez votre combinaison (4 chiffres entre 1 et 6) :</label>
-  <input type="text" id="couleur" maxlength="4" placeholder="ex : 1234">
-  <button id="valider">Valider</button>
+  <h2>Historique :</h2>
+  <ul id="historique"></ul>
 
-  <h3>Zone d'affichage :</h3>
-  <div id="zone" style="border:1px solid #ccc; padding:10px; width:300px; min-height:50px;"></div>
- <script src="mastermind.js"></script>
+  <!-- Lien vers le script externe. Décommenter une seule des 2 options ci-dessous. -->
+  <!-- OPTION A (recommandée) : place le script ici, juste avant </body> -->
+  <script src="mastermind.js"></script>
+
+  <!-- OPTION B (alternative) : mettre dans <head> mais avec defer -->
+  <!-- <script src="script.js" defer></script> -->
+
 </body>
 </html>
